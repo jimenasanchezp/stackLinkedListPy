@@ -11,8 +11,10 @@ def menu():
         print("2. Quitar (Pop)")
         print("3. Mostrar pila")
         print("4. Ver tope (Peek)")
-        print("5. Buscar un valor específico (Contains)")
-        print("6. Salir")
+        print("5. Buscar por Id (Contains)")
+        print("6. Count (Número de elementos)")
+        print("7. Clear (Vaciar pila)")
+        print("8. Salir")
 
         opcion = input("Elige una opción: ")
 
@@ -60,13 +62,21 @@ def menu():
             except Exception as e:
                 print(f"{e}")
 
-        # salir
+        # contar elementos
         elif opcion == "6":
-            print("Saliendo del programa...")
-            break
+            count = stack.count()
+            print(f"Número de elementos en la pila: {count}")
+
+        elif opcion == "7":
+                stack.clear()
+                print("La pila ha sido vaciada.")   
+
+        elif opcion == "8":
+                print("Saliendo del programa...")
+                break
 
         else:
-            print("Opción no válida, intenta nuevamente.")
+                print("Opción no válida, intenta nuevamente.")
 
 
 if __name__ == "__main__":

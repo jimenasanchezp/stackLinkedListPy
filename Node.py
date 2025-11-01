@@ -6,3 +6,4 @@ class Node:
     def __str__(self):
         # devuelve una representación en cadena del valor del nodo
         return str(self.value)
+    
